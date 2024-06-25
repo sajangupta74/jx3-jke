@@ -6,6 +6,10 @@ data:
       repos:
       - sajangupta74/jx3-jke
       require_self_approval: true
+    - lgtm_acts_as_approve: true
+      repos:
+      - sajangupta74/jx3-golang-demo
+      require_self_approval: true
     cat: {}
     cherry_pick_unapproved: {}
     config_updater:
@@ -16,6 +20,11 @@ data:
         env/prow/plugins.yaml:
           name: plugins
     external_plugins:
+      sajangupta74/jx3-golang-demo:
+      - endpoint: http://cd-indicators.jx.svc.cluster.local/lighthouse/events
+        name: cd-indicators
+      - endpoint: http://lighthouse-webui-plugin.jx.svc.cluster.local/lighthouse/events
+        name: lighthouse-webui-plugin
       sajangupta74/jx3-jke:
       - endpoint: http://cd-indicators.jx.svc.cluster.local/lighthouse/events
         name: cd-indicators
@@ -25,6 +34,20 @@ data:
       additional_labels: null
     owners: {}
     plugins:
+      sajangupta74/jx3-golang-demo:
+      - approve
+      - assign
+      - help
+      - hold
+      - lgtm
+      - lifecycle
+      - override
+      - size
+      - trigger
+      - wip
+      - cat
+      - dog
+      - pony
       sajangupta74/jx3-jke:
       - config-updater
       - approve
@@ -52,6 +75,11 @@ data:
     - repos:
       - sajangupta74/jx3-jke
       trusted_org: sajangupta74
+    - repos:
+      - sajangupta74/jx3-golang-demo
+      trusted_org: sajangupta74
+    welcome:
+    - message_template: Welcome
 kind: ConfigMap
 metadata:
   creationTimestamp: null
