@@ -16,6 +16,8 @@ spec:
     provider: minikube
   environments:
   - key: dev
+    owner: sajangupta74
+    repository: jx3-jke
   - key: staging
   - key: production
   ingress:
@@ -26,6 +28,8 @@ spec:
       email: ""
       enabled: false
       production: false
+  pipelineUser:
+    username: jx-jke
   repository: bucketrepo
   secretStorage: local
   vault: {}
