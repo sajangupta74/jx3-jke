@@ -8,6 +8,7 @@ data:
     in_repo_config:
       enabled:
         sajangupta74/jx3-golang-demo: true
+        sajangupta74/jx3-golang-demo2: true
         sajangupta74/jx3-jke: true
     plank: {}
     pod_namespace: jx
@@ -21,6 +22,7 @@ data:
         skip-unknown-contexts: false
       merge_method:
         sajangupta74/jx3-golang-demo: merge
+        sajangupta74/jx3-golang-demo2: merge
         sajangupta74/jx3-jke: merge
       queries:
       - labels:
@@ -34,6 +36,7 @@ data:
         repos:
         - sajangupta74/jx3-jke
         - sajangupta74/jx3-golang-demo
+        - sajangupta74/jx3-golang-demo2
       - labels:
         - updatebot
         missingLabels:
@@ -45,6 +48,7 @@ data:
         repos:
         - sajangupta74/jx3-jke
         - sajangupta74/jx3-golang-demo
+        - sajangupta74/jx3-golang-demo2
       target_url: http://lighthouse-jx.192.168.49.2.nip.io/merge/status
 kind: ConfigMap
 metadata:

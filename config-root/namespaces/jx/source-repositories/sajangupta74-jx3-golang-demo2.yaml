@@ -1,0 +1,22 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  labels:
+    owner: sajangupta74
+    provider: github
+    repository: jx3-golang-demo2
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  name: sajangupta74-jx3-golang-demo2
+  namespace: jx
+spec:
+  httpCloneURL: https://github.com/sajangupta74/jx3-golang-demo2.git
+  org: sajangupta74
+  provider: https://github.com
+  providerKind: github
+  providerName: github
+  repo: jx3-golang-demo2
+  scheduler:
+    kind: ""
+    name: in-repo
+  url: https://github.com/sajangupta74/jx3-golang-demo2
